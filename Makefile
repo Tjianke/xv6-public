@@ -35,6 +35,7 @@ OBJS = \
 #TOOLPREFIX = 
 
 # Try to infer the correct TOOLPREFIX if not set
+TOOLPREFIX = i386-elf-
 ifndef TOOLPREFIX
 TOOLPREFIX := $(shell if i386-jos-elf-objdump -i 2>&1 | grep '^elf32-i386$$' >/dev/null 2>&1; \
 	then echo 'i386-jos-elf-'; \
